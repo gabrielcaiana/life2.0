@@ -27,6 +27,26 @@ export default [
         name: 'dashboard',
         component: () => import('../views/private/Dashboard.vue')
       },
+			{
+        path: '/peso',
+        name: 'peso',
+        component: () => import('../views/private/Peso.vue')
+      },
+			{
+        path: '/alimentos',
+        name: 'alimentos',
+        component: () => import('../views/private/Alimentos.vue')
+      },
+			{
+        path: '/pressao-arterial',
+        name: 'pressao-arterial',
+        component: () => import('../views/private/PressaoArterial.vue')
+      },
+			{
+        path: '/atividades-fisicas',
+        name: 'atividades-fisicas',
+        component: () => import('../views/private/AtividadesFisicas.vue')
+      },
 		]
 	},
 ]
