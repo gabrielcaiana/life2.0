@@ -103,7 +103,7 @@ export default {
 
   methods: {
     efetuarLogin() {
-      console.log("login efetuado");
+      this.$router.push({name: 'dashboard'})
     },
   },
 };

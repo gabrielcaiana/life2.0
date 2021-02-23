@@ -2,7 +2,7 @@
   <v-app-bar app>
     <v-app-bar-nav-icon @click="drawerToggle()"></v-app-bar-nav-icon>
 
-    <v-toolbar-title>Life Healthy</v-toolbar-title>
+    <v-toolbar-title></v-toolbar-title>
   </v-app-bar>
 </template>
 
