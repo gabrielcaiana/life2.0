@@ -22,5 +22,6 @@ export default {
 <style scoped>
 .container {
   height: 100%;
+	max-width: 1440px;
 }
 </style>
