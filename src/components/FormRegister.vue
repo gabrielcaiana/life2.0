@@ -1,6 +1,6 @@
 <template>
   <div class="register">
-    <div class="login__logo">
+    <div class="register__logo">
       <img src="@/assets/images/logo.svg" alt="Logo" />
     </div>
     <validation-observer ref="observer" v-slot="{ invalid }">
