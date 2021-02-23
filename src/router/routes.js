@@ -47,6 +47,11 @@ export default [
         name: 'atividades-fisicas',
         component: () => import('../views/private/AtividadesFisicas.vue')
       },
+			{
+        path: '/perfil',
+        name: 'perfil',
+        component: () => import('../views/private/Perfil.vue')
+      },
 		]
 	},
 ]
