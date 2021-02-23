@@ -19,7 +19,7 @@ import FormLogin from '../../components/FormLogin'
 
 <style lang="scss" scoped>
 	.container {
-		height: 100vh;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
