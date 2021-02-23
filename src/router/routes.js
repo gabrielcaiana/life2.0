@@ -2,13 +2,19 @@ export default [
 	{
 		path: '/',
 		name: 'login',
-		component:() => import ('../views/public/Login')
+		component:() => import ('../views/public/Login'),
+		meta: {
+			public: true
+		}
 	},
 
 	{
 		path: '/register',
 		name: 'register',
-		component:() => import('../views/public/Register')
+		component:() => import('../views/public/Register'),
+		meta: {
+			public: true
+		}
 	},
 	
 	{
