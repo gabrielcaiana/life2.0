@@ -1,7 +1,7 @@
 export const namespaced = true
 
 export const state = { 
-	drawer: false
+	drawer: null
 }
 
 export const mutations = {

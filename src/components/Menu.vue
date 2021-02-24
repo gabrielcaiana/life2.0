@@ -34,7 +34,7 @@
 <script>
 export default {
   data: () => ({
-    btns: [["gabriel Caiana"]],
+    btns: [["Menu"]],
     items: [
       {
         text: "Perfil",
