@@ -1,10 +1,10 @@
 <template>
-  <!-- <router-link :to="url"> -->
-    <div class="card" :class="border">
-      <img class="card__icon" :src="icon" :alt="title" />
-      <p class="card__title">{{ title }}</p>
-    </div>
-  <!-- </router-link> -->
+  <div class="card" :class="border">
+    <img class="card__icon" :src="icon" :alt="title" />
+    <router-link class="card__link" :to="url">
+      <p class="card__title" :class="color">{{ title }}</p>
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -26,13 +26,18 @@ export default {
       type: String,
       required: true,
     },
+
+    color: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .card {
-	width: 100%;
+  width: 100%;
   padding: 32px 0;
   border-radius: 10px;
   border: 1px solid $color-text;
@@ -42,11 +47,11 @@ export default {
   flex-direction: column;
   cursor: pointer;
   transition: all 0.2s;
-	margin-bottom: 16px;
+  margin-bottom: 16px;
 
   @media (min-width: 850px) {
     margin: 12px;
-		width: 340px;
+    width: 340px;
   }
 
   &:hover {
@@ -58,9 +63,30 @@ export default {
   &__title {
     font-weight: 600;
     font-size: 16px;
+    text-align: center;
+  }
+
+  &__link {
     text-decoration: none;
   }
 }
+
+.height-text {
+  color: $color-primary;
+}
+
+.food-text {
+  color: $color-text;
+}
+
+.heart-text {
+	color: $color-red
+}
+
+.physical-activities-text {
+	color: $color-green-light
+}
+
 .border-height {
   color: $color-primary;
   border: 1px solid $color-primary;

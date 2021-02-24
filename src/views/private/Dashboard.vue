@@ -23,7 +23,7 @@
           :shadow="'height'"
           :title="'Peso'"
           :subtitle="'90Kg'"
-          :status="`registrado em: 23/02/2021`"
+          :status="`Data: 23/02/2021`"
           :color="'height-text'"
           :icon="'/icons/height.svg'"
         />
@@ -32,8 +32,8 @@
         <Card
           :shadow="'heart'"
           :title="'Pressão Arterial'"
-          :subtitle="`Verificando...`"
-          :status="`Verificando...`"
+          :subtitle="`12/06`"
+          :status="`Normal`"
           :color="'heart-text'"
           :icon="'/icons/heart.svg'"
         />
@@ -43,31 +43,35 @@
 
     <div class="dashboard__options">
       <CardsOutline
-        icon="/images/card_peso.svg"
+        icon="/icons/card_peso.svg"
         title="Peso"
         border="border-height"
         url="/peso"
+				color="height-text"
       />
 
       <CardsOutline
-        icon="/images/card_alimentos.svg"
+        icon="/icons/card_alimentos.svg"
         title="Alimentos"
         border="border-foods"
         url="/alimentos"
+				color="food-text "
       />
 
       <CardsOutline
-        icon="/images/card_pressao.svg"
+        icon="/icons/card_pressao.svg"
         title="Pressão Arterial"
         border="border-heart"
         url="/pressao-arterial"
+				color="heart-text"
       />
 
       <CardsOutline
-        icon="/images/card_atividades.svg"
+        icon="/icons/card_atividades.svg"
         title="Atividades Fisicas"
         border="border-physical-activities"
         url="/atividades-fisicas"
+				color="physical-activities-text"
       />
     </div>
   </div>
