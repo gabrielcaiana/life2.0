@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <h1 class="dashboard__title">Dashboard</h1>
-    <p class="dashboard__welcome">Bem vindo <b>Gabriel Caiana</b> </p>
+    <p class="dashboard__welcome">Bem vindo <b>Gabriel Caiana</b></p>
 
     <p class="dashboard__tips">
       Aproveitei o dia para se alimentar bem e práticar algum tipo de esporte.
@@ -40,14 +40,46 @@
       </v-col>
     </v-row>
     <h2 class="dashboard__subtitle">O que deseja ver?</h2>
+
+    <div class="dashboard__options">
+      <CardsOutline
+        icon="/images/card_peso.svg"
+        title="Peso"
+        border="border-height"
+        url="/peso"
+      />
+
+      <CardsOutline
+        icon="/images/card_alimentos.svg"
+        title="Alimentos"
+        border="border-foods"
+        url="/alimentos"
+      />
+
+      <CardsOutline
+        icon="/images/card_pressao.svg"
+        title="Pressão Arterial"
+        border="border-heart"
+        url="/pressao-arterial"
+      />
+
+      <CardsOutline
+        icon="/images/card_atividades.svg"
+        title="Atividades Fisicas"
+        border="border-physical-activities"
+        url="/atividades-fisicas"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import Card from "../../components/commons/Card";
+import CardsOutline from "../../components/commons/CardOutline";
 export default {
   components: {
     Card,
+    CardsOutline,
   },
 
   data: () => ({
@@ -77,7 +109,7 @@ export default {
   &__welcome {
     font-size: 1.1em;
     color: rgb(65, 65, 65);
-		margin: 4px 0;
+    margin: 4px 0;
 
     @media (max-width: 600px) {
       text-align: center;
@@ -98,6 +130,17 @@ export default {
     font-size: 1.4em;
     margin: 42px 0;
     text-align: center;
+  }
+
+  &__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+    }
   }
 }
 </style>
