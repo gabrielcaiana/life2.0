@@ -50,7 +50,7 @@
     </validation-observer>
     <div>
       <p class="pt-4 login__register">
-        Ainda não tem uma conta? 
+        Ainda não tem uma conta?
         <router-link to="/register"><b> Faça agora mesmo! </b></router-link>
       </p>
     </div>
@@ -103,7 +103,8 @@ export default {
 
   methods: {
     efetuarLogin() {
-      this.$router.push({name: 'dashboard'})
+      this.$refs.observer.validate();
+      this.$store.dispatch("authentication/login", this.user);
     },
   },
 };
@@ -122,11 +123,11 @@ export default {
     justify-content: center;
   }
 
-	&__register{ 
-		width: 100%;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-	}
+  &__register {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 </style>

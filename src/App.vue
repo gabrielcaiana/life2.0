@@ -1,11 +1,24 @@
 <template id="app">
-  <transition name="slide" mode="out-in">
-    <router-view />
-  </transition>
+  <div>
+    <SnackBar :configSnack="snackbar" />
+    <transition name="slide" mode="out-in">
+      <router-view />
+    </transition>
+  </div>
 </template>
 
 <script>
-export default {};
+import SnackBar from './components/commons/SnackBar'
+import { mapState } from 'vuex'
+export default {
+  components: {
+    SnackBar
+  },
+
+   computed: {
+    ...mapState(['snackbar'])
+  }
+};
 </script>
 
 <style scoped>
