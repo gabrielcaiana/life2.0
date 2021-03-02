@@ -1,15 +1,15 @@
 <template>
-	<div>
-		<h1>Pressão Arterial</h1>
-	</div>
+  <div>
+    <h1>Pressão Arterial</h1>
+    <TableBloodPressure />
+  </div>
 </template>
 
 <script>
-	export default {
-		
-	}
+import TableBloodPressure from "../../components/commons/Tables/TableBloodPressure.vue";
+export default {
+  components: { TableBloodPressure },
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
