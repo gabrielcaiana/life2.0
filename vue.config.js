@@ -1,4 +1,4 @@
-const globalSassFiles = ["./src/styles/_variables.scss"];
+const globalSassFiles = ["./src/scss/variables.scss"];
 
 module.exports = {
   transpileDependencies: ["vuetify"],

@@ -25,6 +25,7 @@ export const mutations = {
 export const actions = {
   async login({ commit, dispatch }, user) {
     try {
+      dispatch('loading/setLoading', true, {root: true})
       const { data } = await http.post("auth/login", user);
         
       const dataUser = {
@@ -44,11 +45,13 @@ export const actions = {
       dispatch('snackbar/setSnackBar', {msg: 'Login Efetuado com sucesso!'}, {root: true})
       return router.push({ name: "dashboard" });
     } catch (err) {
-        console.log(err)
+        dispatch('snackbar/setSnackBar', {msg: 'Email ou senha incorretos', success: false}, {root: true})
+    } finally {
+      dispatch('loading/setLoading', false, {root: true})
     }
   },
 
-  async logout({ commit }) {
+  async logout({ commit, dispatch }) {
     try {
       commit("DEFINE_LOGOUT")
       return router.push({name: "login"})

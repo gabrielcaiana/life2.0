@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Alimentos</h1>
+		<h1 class="title--text">Alimentos</h1>
 		<TableFoods />
 	</div>
 </template>

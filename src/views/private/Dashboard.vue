@@ -1,9 +1,9 @@
 <template>
   <div class="dashboard">
-    <h1 class="dashboard__title">Dashboard</h1>
-    <p class="dashboard__welcome">Bem vindo <b>Gabriel Caiana</b></p>
+    <h1 class="dashboard__title title--text">Dashboard</h1>
+    <p class="dashboard__welcome text--text">Bem vindo <b>Gabriel Caiana</b></p>
 
-    <p class="dashboard__tips">
+    <p class="dashboard__tips text--text">
       Aproveitei o dia para se alimentar bem e práticar algum tipo de esporte.
     </p>
 
@@ -39,7 +39,7 @@
         />
       </v-col>
     </v-row>
-    <h2 class="dashboard__subtitle">O que deseja ver?</h2>
+    <h2 class="dashboard__subtitle title--text">O que deseja ver?</h2>
 
     <div class="dashboard__options">
       <CardsOutline
@@ -97,8 +97,6 @@ export default {
 .dashboard {
   &__title {
     font-size: 2em;
-    color: $color-secundary;
-    margin: 32px 0 8px 0;
 
     @media (max-width: 900px) {
       font-size: 1.6em;
@@ -130,7 +128,6 @@ export default {
   }
 
   &__subtitle {
-    color: $color-text-secundary;
     font-size: 1.4em;
     margin: 42px 0;
     text-align: center;

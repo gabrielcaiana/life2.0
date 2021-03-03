@@ -8,7 +8,7 @@
     >
       <template v-slot:activator="{ attrs, on }">
         <v-btn
-          class="black--text ma-5"
+          class="title--text ma-5"
           v-bind="attrs"
           v-on="on"
           depressed

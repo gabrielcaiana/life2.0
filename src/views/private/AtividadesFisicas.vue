@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Atividades Físicas</h1>
+		<h1 class="title--text">Atividades Físicas</h1>
 		<TableActivities />
 	</div>
 </template>

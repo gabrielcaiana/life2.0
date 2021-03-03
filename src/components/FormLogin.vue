@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="login bgContent">
     <div class="login__logo">
       <img src="@/assets/images/logo.svg" alt="Logo" />
     </div>
@@ -49,7 +49,7 @@
       </form>
     </validation-observer>
     <div>
-      <p class="pt-4 login__register">
+      <p class="pt-4 login__register text--text">
         Ainda não tem uma conta?
         <router-link to="/register"><b> Faça agora mesmo! </b></router-link>
       </p>
@@ -114,7 +114,6 @@ export default {
 .login {
   width: 90%;
   max-width: 400px;
-  background: $color-white;
   padding: 32px;
   border-radius: 12px;
 

@@ -1,5 +1,6 @@
 <template id="app">
   <div>
+    <Loading :visible="loading" />
     <SnackBar :configSnack="snackbar" />
     <transition name="slide" mode="out-in">
       <router-view />
@@ -9,14 +10,16 @@
 
 <script>
 import SnackBar from './components/commons/SnackBar'
+import Loading from './components/commons/Loading'
 import { mapState } from 'vuex'
 export default {
   components: {
-    SnackBar
+    SnackBar,
+    Loading
   },
 
    computed: {
-    ...mapState(['snackbar'])
+    ...mapState(['snackbar', 'loading'])
   }
 };
 </script>

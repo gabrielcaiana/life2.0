@@ -1,8 +1,8 @@
 <template>
-  <div class="card" :class="border">
+  <div class="card bgContent" :class="border">
     <img class="card__icon" :src="icon" :alt="title" />
     <router-link class="card__link" :to="url">
-      <p class="card__title" :class="color">{{ title }}</p>
+      <p class="card__title text--text">{{ title }}</p>
     </router-link>
   </div>
 </template>
@@ -26,11 +26,6 @@ export default {
       type: String,
       required: true,
     },
-
-    color: {
-      type: String,
-      required: true,
-    },
   },
 };
 </script>
@@ -40,7 +35,6 @@ export default {
   width: 100%;
   padding: 32px 0;
   border-radius: 10px;
-  border: 1px solid $color-text;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,38 +63,5 @@ export default {
   &__link {
     text-decoration: none;
   }
-}
-
-.height-text {
-  color: $color-primary;
-}
-
-.food-text {
-  color: $color-text;
-}
-
-.heart-text {
-	color: $color-red
-}
-
-.physical-activities-text {
-	color: $color-green-light
-}
-
-.border-height {
-  color: $color-primary;
-  border: 1px solid $color-primary;
-}
-.border-foods {
-  color: $color-text;
-  border: 1px solid $color-text;
-}
-.border-heart {
-  color: $color-red;
-  border: 1px solid $color-red;
-}
-.border-physical-activities {
-  color: $color-green-light;
-  border: 1px solid $color-green-light;
 }
 </style>

@@ -10,7 +10,7 @@ export const state = {
 
 export const mutations = {
   SET_SNACK_BAR(state, {msg, success = true}) {
-    state.snackbar = {color: success ? 'sucess' : 'error', msg, visible: true}
+    state.snackbar = {color: success ? 'success' : 'error', msg, visible: true}
 	},
 }
 

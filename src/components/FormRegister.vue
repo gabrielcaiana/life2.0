@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div class="register bgContent">
     <div class="register__logo">
       <img src="@/assets/images/logo.svg" alt="Logo" />
     </div>
@@ -200,7 +200,6 @@ export default {
 .register {
   width: 90%;
   max-width: 400px;
-  background: $color-white;
   padding: 32px;
   border-radius: 12px;
 

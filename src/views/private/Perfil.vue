@@ -1,7 +1,7 @@
 <template>
-  <div class="profile">
-		<h2>Perfil</h2>
-		<p>Informações do seu usuário</p>
+  <div class="profile bgContent mt-5">
+		<h2 class="title--text">Perfil</h2>
+		<p class="text--text">Informações do seu usuário</p>
     <validation-observer ref="observer">
       <form @submit.prevent="submit">
         <v-row>
@@ -191,7 +191,7 @@ export default {
 
 <style lang="scss" scoped>
 .profile {
-  background: $color-white;
+  // background: $color-white;
   padding: 32px;
   border-radius: 12px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
