@@ -1,11 +1,11 @@
 <template id="app">
-  <div>
+  <v-app>
     <Loading :visible="loading" />
     <SnackBar :configSnack="snackbar" />
     <transition name="slide" mode="out-in">
       <router-view />
     </transition>
-  </div>
+  </v-app>
 </template>
 
 <script>
