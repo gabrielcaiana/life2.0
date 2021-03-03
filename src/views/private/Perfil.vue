@@ -170,8 +170,6 @@ export default {
       email: "",
       height: "",
       gender: "",
-      password: "",
-      newPassword: "",
     },
     menu: "",
     show1: false,
@@ -181,6 +179,14 @@ export default {
       emailMatch: () => `O e-mail e a senha que você digitou não correspondem`,
     },
   }),
+  computed: {
+    ...mapGetters('authentication', ['user'])
+  },
+
+  mounted() {
+    this.profile = this.user
+  },
+
   methods: {
     submit() {
       this.$refs.observer.validate();
@@ -191,7 +197,6 @@ export default {
 
 <style lang="scss" scoped>
 .profile {
-  // background: $color-white;
   padding: 32px;
   border-radius: 12px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

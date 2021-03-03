@@ -51,7 +51,7 @@ export const actions = {
     }
   },
 
-  async logout({ commit, dispatch }) {
+  async logout({ commit }) {
     try {
       commit("DEFINE_LOGOUT")
       return router.push({name: "login"})
@@ -61,4 +61,8 @@ export const actions = {
   }
 };
 
-export const getters = {};
+export const getters = {
+  user: (state) => {
+    return state.user
+  }
+};
