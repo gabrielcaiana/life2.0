@@ -20,6 +20,7 @@
         <v-divider></v-divider>
         <v-switch
           @click="toggleTheme"
+          v-model="switch1"
           class="ml-3"
           :label="`Dark mode`"
         ></v-switch>
@@ -32,6 +33,7 @@
 import { mapGetters } from "vuex";
 export default {
   data: () => ({
+    switch1: true,
     selectedItem: 0,
     items: [
       { text: "Dashboard", icon: "mdi-view-dashboard", name: "dashboard" },
