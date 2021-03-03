@@ -190,6 +190,7 @@ export default {
   methods: {
     submit() {
       this.$refs.observer.validate();
+      alert("Em breve :D")
     },
   },
 };

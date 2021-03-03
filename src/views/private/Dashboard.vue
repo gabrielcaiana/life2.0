@@ -43,7 +43,7 @@
 
     <div class="dashboard__options">
       <CardsOutline
-        icon="/icons/card_peso.svg"
+        icon="/icons/height.svg"
         title="Peso"
         border="border-height"
         url="/peso"
