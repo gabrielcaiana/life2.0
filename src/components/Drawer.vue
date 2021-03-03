@@ -32,7 +32,6 @@
 import { mapGetters } from "vuex";
 export default {
   data: () => ({
-    // switch1: false,
     selectedItem: 0,
     items: [
       { text: "Dashboard", icon: "mdi-view-dashboard", name: "dashboard" },

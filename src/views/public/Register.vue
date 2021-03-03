@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-container fluid class="container">
+      <v-container fluid class="container bgContent">
         <Register />
       </v-container>
     </v-main>
@@ -23,6 +23,5 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eee;
 }
 </style>
