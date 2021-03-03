@@ -47,7 +47,6 @@
         title="Peso"
         border="border-height"
         url="/peso"
-				color="height-text"
       />
 
       <CardsOutline
@@ -55,7 +54,6 @@
         title="Alimentos"
         border="border-foods"
         url="/alimentos"
-				color="food-text "
       />
 
       <CardsOutline
@@ -63,7 +61,6 @@
         title="Pressão Arterial"
         border="border-heart"
         url="/pressao-arterial"
-				color="heart-text"
       />
 
       <CardsOutline
@@ -71,7 +68,6 @@
         title="Atividades Fisicas"
         border="border-physical-activities"
         url="/atividades-fisicas"
-				color="physical-activities-text"
       />
     </div>
   </div>

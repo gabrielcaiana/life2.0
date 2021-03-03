@@ -1,5 +1,5 @@
 <template>
-  <div class="item d-flex bgContent" :class="shadow">
+  <div class="item d-flex bgContent">
     <div class="item__icon">
       <img :src="icon" :alt="title" />
     </div>
@@ -78,18 +78,4 @@ export default {
     }
   }
 }
-
-.imc {
-  box-shadow: 0px 5px 20px rgba(244, 67, 54, 0.2);
-}
-
-
-.height {
-  box-shadow: 0px 5px 20px rgba(117, 221, 221, 0.3);
-}
-
-.heart {
-  box-shadow: 0px 5px 20px rgba(9, 188, 138, 0.2);
-}
-
 </style>
