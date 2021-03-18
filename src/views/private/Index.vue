@@ -1,8 +1,6 @@
 <template>
   <v-app>
     <app-bar />
-		<drawer />
-
     <v-main class="mt-5 bg">
       <v-container class="container pa-4" fluid>
 				<router-view />
@@ -13,9 +11,8 @@
 
 <script>
 import AppBar from "../../components/AppBar";
-import Drawer from '../../components/Drawer.vue';
 export default {
-  components: { AppBar, Drawer }
+  components: { AppBar }
 };
 </script>
 

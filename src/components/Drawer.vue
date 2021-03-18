@@ -30,8 +30,14 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 export default {
+  props: {
+    drawer: {
+      type: Boolean,
+      required: true
+    }
+  },
+
   data: () => ({
     switch1: true,
     selectedItem: 0,
@@ -48,16 +54,10 @@ export default {
     ],
   }),
 
-  computed: {
-    ...mapGetters("drawer", ["drawer"]),
-  },
-
   methods: {
     toggleTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
-    }
+    },
   }
 };
 </script>
-
-<style lang="scss" scoped></style>
