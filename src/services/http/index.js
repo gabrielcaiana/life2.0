@@ -1,8 +1,9 @@
 import axios from "axios";
 import { state } from "../../store/modules/authentication"
+import { API_URL } from '/public/config/config.json'
 
 const http = axios.create({
-  baseURL: 'https://life-health-api.herokuapp.com/',
+  baseURL: API_URL,
   headers: {
 		"Accept": "application/json",
 		"Content": "application/json"
