@@ -1,5 +1,5 @@
-import http from "@/services/http";
 import router from "@/router";
+import { postLogin } from '@/services/login'
 
 export const namespaced = true;
 
@@ -26,7 +26,7 @@ export const actions = {
   async login({ commit, dispatch }, user) {
     try {
       dispatch('loading/setLoading', true, {root: true})
-      const { data } = await http.post("auth/login", user);
+      const { data } = await postLogin(user)
         
       const dataUser = {
         id: data.user.id,
