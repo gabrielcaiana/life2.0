@@ -24,10 +24,9 @@ export const mutations = {
 
 export const actions = {
   async login({ commit, dispatch }, user) {
+    dispatch('loading/setLoading', true, {root: true})
     try {
-      dispatch('loading/setLoading', true, {root: true})
       const { data } = await postLogin(user)
-        
       const dataUser = {
         id: data.user.id,
         date: data.user.date,
@@ -43,11 +42,11 @@ export const actions = {
       localStorage.setItem("token", data.access_token)
       localStorage.setItem('user', JSON.stringify(data.user))
       dispatch('snackbar/setSnackBar', {msg: 'Login Efetuado com sucesso!'}, {root: true})
+      dispatch('loading/setLoading', false, {root: true})
       return router.push({ name: "dashboard" });
     } catch (err) {
         dispatch('snackbar/setSnackBar', {msg: 'Email ou senha incorretos', success: false}, {root: true})
-    } finally {
-      dispatch('loading/setLoading', false, {root: true})
+        dispatch('loading/setLoading', false, {root: true})
     }
   },
 

@@ -104,7 +104,7 @@ export default {
   methods: {
     efetuarLogin() {
       this.$refs.observer.validate();
-      this.$store.dispatch("authentication/login", this.user);
+      this.$emit('login', this.user)
     },
   },
 };
