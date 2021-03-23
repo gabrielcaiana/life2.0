@@ -190,7 +190,7 @@ export default {
 
   methods: {
     register_user() {
-      this.$router.push({name: 'login'})
+      this.$emit("register", this.register)
     },
   },
 };

@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <v-container fluid class="container bgContent">
-        <Register />
+        <Register @register="submit($event)" />
       </v-container>
     </v-main>
   </v-app>
@@ -14,6 +14,13 @@ export default {
   components: {
     Register,
   },
+
+  methods: {
+    submit($event) {
+      this.$store.dispatch("register/register", $event)
+      this.$router.push({name: 'login'})
+    }
+  }
 };
 </script>
 

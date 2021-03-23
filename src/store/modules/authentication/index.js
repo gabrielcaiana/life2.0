@@ -29,6 +29,7 @@ export const actions = {
       const { data } = await postLogin(user)
       const dataUser = {
         id: data.user.id,
+        name: data.user.name,
         date: data.user.date,
         email: data.user.email,
         height: data.user.height,
@@ -40,7 +41,7 @@ export const actions = {
         user: dataUser
       });
       localStorage.setItem("token", data.access_token)
-      localStorage.setItem('user', JSON.stringify(data.user))
+      localStorage.setItem('user', JSON.stringify(dataUser))
       dispatch('snackbar/setSnackBar', {msg: 'Login Efetuado com sucesso!'}, {root: true})
       dispatch('loading/setLoading', false, {root: true})
       return router.push({ name: "dashboard" });
