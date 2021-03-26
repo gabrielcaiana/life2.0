@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <h1 class="dashboard__title title--text">Dashboard</h1>
-    <p class="dashboard__welcome text--text">Bem vindo <b>Gabriel Caiana</b></p>
+    <p class="dashboard__welcome text--text">Bem vindo <b>{{user.name}}</b></p>
 
     <p class="dashboard__tips text--text">
       Aproveitei o dia para se alimentar bem e práticar algum tipo de esporte.
@@ -76,10 +76,15 @@
 <script>
 import Card from "../../components/commons/Card";
 import CardsOutline from "../../components/commons/CardOutline";
+import { mapGetters } from "vuex"
 export default {
   components: {
     Card,
     CardsOutline,
+  },
+
+  computed: {
+    ...mapGetters('authentication', ['user'])
   },
 
   data: () => ({

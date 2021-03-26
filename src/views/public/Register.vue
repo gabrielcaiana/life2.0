@@ -18,7 +18,6 @@ export default {
   methods: {
     submit($event) {
       this.$store.dispatch("register/register", $event)
-      this.$router.push({name: 'login'})
     }
   }
 };

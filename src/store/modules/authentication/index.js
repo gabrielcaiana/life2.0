@@ -27,13 +27,14 @@ export const actions = {
     dispatch('loading/setLoading', true, {root: true})
     try {
       const { data } = await postLogin(user)
+      const loginUser = data.user[0]
       const dataUser = {
-        id: data.user.id,
-        name: data.user.name,
-        date: data.user.date,
-        email: data.user.email,
-        height: data.user.height,
-        gender: data.user.gender
+        id: loginUser.id,
+        name: loginUser.name,
+        date: loginUser.date,
+        email: loginUser.email,
+        height: loginUser.height,
+        gender: loginUser.gender
     }
 
       commit("DEFINE_USER_LOGIN", {

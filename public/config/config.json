@@ -1,3 +1,3 @@
 {
-    "API_URL": "https://life-health-api.herokuapp.com/"
+    "API_URL": "http://localhost:5000/"
 }

@@ -90,8 +90,8 @@ export default {
   },
   data: () => ({
     user: {
-      password: "",
       email: "",
+      password: "",
     },
     menu: "",
     show1: false,
